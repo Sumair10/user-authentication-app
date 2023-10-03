@@ -1,6 +1,7 @@
 import axios from "axios"
 
 const API_KEY ='AIzaSyABGfywWurKV-ed5KwQRRQBG_oMneChEfk'
+const API_KEY1 ='AIzaSyABGfywWurKV-ed5KwQRRQBG_oMneChEfk'
 
 
 export const createUser =async (email , password) =>{
@@ -9,6 +10,7 @@ export const createUser =async (email , password) =>{
         'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyABGfywWurKV-ed5KwQRRQBG_oMneChEfk',{
             email :email,
             password :password,
+
             returnSecureToken: true
         }
     )
