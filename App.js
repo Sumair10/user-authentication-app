@@ -63,11 +63,13 @@ const Root = () => {
 
   const [isTryingToLigin, setIsTryingToLigin] = useState(true)
 
+
   const authCtx = useContext(AuthContext)
 
   useEffect(() => {
     async function fetchToken() {
       const storedoken = await AsyncStorage.getItem('token')
+      console.log('sss')
       if (storedoken) {
         authCtx.authenticate(storedoken)
       }
